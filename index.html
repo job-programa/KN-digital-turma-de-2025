@@ -99,6 +99,10 @@
       display: none;
       padding: 40px;
     }
+
+    #foto{
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -119,9 +123,27 @@
     <img src="./image2.jpg" alt="Imagem 3">
     <img src="./image3.jpg" alt="Imagem 4">
     <img src="./image4.jpg" alt="Imagem 5">
-
+    <img src="./image6.jpg" alt="Image ">
+    <button class="botao-pulsante">Quero particpar da equipe</button>
+    <img id="foto" src="./image7.jpg" alt="Image ">
   </div>
+
+
 </section>
+
+
+<div id="video-overlay">
+  <h1>MUITOS ALUNOS JÁ ESTÃO FATURANDO E ATÉ VIVENDO DE FORMA AUTÔNOMA. FAÇA PARTE DA NOSSA EQUIPE HOJE MESMO!
+  </h1>
+  <video id="introVideo" controls poster="" >
+    <source src="./Vídeo2.mp4" type="video/mp4">
+    Seu navegador não suporta o vídeo.
+  </video>
+  <button class="botao-pulsante">Quero particpar da equipe</button>
+
+</div>
+</div>
+
 
 <style>
   #galeria {
@@ -146,7 +168,42 @@
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
-</style>
+    .botao-pulsante {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      animation: pulsar 1.5s infinite;
+      box-shadow: 0 0 0 rgba(255, 0, 0, 0.7);
+      transition: transform 0.2s;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      margin-top: 10px;
+      
+    }
+
+    .botao-pulsante:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes pulsar {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+      }
+    }
+  </style>
 
 
 </body>
