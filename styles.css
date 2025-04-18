@@ -24,7 +24,7 @@
   }
   
   .logo {
-    width: 110px;
+    width: 100px;
   }
   
   .titulo {
@@ -59,7 +59,7 @@
   }
   
   .hamburguer-menu span {
-    width: 25px;
+    width: 23px;
     height: 3px;
     background-color: #f9f9f9;
   }
@@ -76,7 +76,7 @@
   
     .titulo {
       flex: 1;
-      color: rgb(242, 242, 242);
+      color: rgb(255, 255, 255);
     }
   
     .hamburguer-menu {
@@ -116,6 +116,7 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+
  
 }
 
@@ -145,5 +146,18 @@
 #red{
 background-color: rgb(182, 28, 28);
 color: white;
+font-size: 20px;
+padding-top: 10px;
+padding-bottom: 20px;
+
+}
+
+#red h2{
+  color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
 
 }
