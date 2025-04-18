@@ -21,7 +21,7 @@
   }
 
   .header h1 {
-    font-size: 20px;
+    font-size: 40px;
   }
   
   .logo-container {
@@ -165,7 +165,7 @@ padding-bottom: 20px;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 40px;
 
 
 }
