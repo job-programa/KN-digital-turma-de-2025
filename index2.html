@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vagas Home Office 2025</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Massageador Facial Europeu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="./image.jpg" alt="Logo" class="logo">
+    </div>
+    <h1 class="titulo">Vagas Home Office <br> Turma de 2025</h1>
+    <nav class="nav-links">
+
+    </nav>
+    <div class="hamburguer-menu" id="hamburguer-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  </div>
+</div>
+<div  id="red" class="elementor-element elementor-element-d2e1c99 elementor-widget elementor-widget-heading" data-id="d2e1c99" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<style>/*! elementor - v3.22.0 - 26-06-2024 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h2 class="elementor-heading-title elementor-size-default">Atenção: essa turma de 2025 <br>fecha heim</h2>  	<div class="countdown">
+<div class="box">
+<span class="value" data-hours>00</span>
+<span class="name">horas</span>
+</div>
+<div class="box">
+<span class="value" data-minutes>00</span>
+<span class="name">minutos</span>
+</div>
+<div class="box">
+<span class="value" data-seconds>00</span>
+<span class="name">segundos</span>
+</div>
+</div>
+<script src="./script.js" defer></script>
+</div>
+<script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div>
+
+
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+      
 
-    html, body {
-      width: 100%;
-      overflow-x: hidden;
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-    }
-
-    /* Cabeçalho */
-    header {
-      background-color: #111;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .logo {
-      width: 100px;
-      border-radius: 8px;
-    }
-
-    .titulo {
-      font-size: 24px;
-      margin: 10px 0;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      gap: 20px;
-      padding-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Vídeo bloqueador */
+  
     #video-overlay {
+      
       top: 0;
       left: 0;
       width: 100%;
@@ -63,13 +74,13 @@
       align-items: center;
       flex-direction: column;
       z-index: 9999;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
     }
 
     #video-overlay h1 {
       color: white;
-      font-size: 1.8em;
+      font-size: 22px;
       margin-bottom: 20px;
     }
 
@@ -77,124 +88,285 @@
       width: 90%;
       max-width: 450px;
       height: auto;
+      outline: none;
     }
 
-    /* Galeria */
     #main-content {
       display: none;
-      width: 100%;
+      padding: 40px;
     }
 
-    #galeria {
-      width: 100%;
-      padding: 40px 0;
-      background-color: #f0f0f0;
+    #foto{
+      margin-top: 10px;
+    }
+
+
+
+
+
+
+
+
+    #expan {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #520707;
+      color: white;  }
+
+    section.galeria {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      gap: 20px;
+      padding: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+
+    .galeria img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      scroll-snap-align: center;
+      flex-shrink: 0;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .galeria .img-meio {
+      margin-top: 30px; /* desloca a imagem do meio pra baixo */
+    }
+
+    /* Estilo do modal fullscreen */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
       display: flex;
       justify-content: center;
-    }
-
-    .foto-container {
-      display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 10px;
-      width: 100%;
-      max-width: 500px;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
     }
 
-    .foto-container img {
-      width: 100%;
+    .modal.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 80%;
+      object-fit: contain;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(255,255,255,0.2), transparent 60%);
     }
 
-    /* CTA final */
-    #cta {
-      background-color: #fafafa;
-      text-align: center;
-      padding: 40px 20px;
+    .modal:after {
+      content: "Clique em qualquer lugar para fechar";
+      position: absolute;
+      bottom: 30px;
+      color: #ccc;
+      font-size: 14px;
     }
 
-    #cta h2 {
-      font-size: 1.3em;
-      color: #333;
-      margin-bottom: 20px;
+    /* Scrollbar opcional pra mobile (visual mais limpo) */
+    .galeria::-webkit-scrollbar {
+      height: 8px;
     }
 
-    #cta button {
-      background-color: #e50914;
-      color: rgb(255, 255, 255);
-      font-size: 1.2em;
-      border: none;
-      border-radius: 5px;
-      padding: 15px 30px;
-      cursor: pointer;
-      transition: background 0.3s;
+    .galeria::-webkit-scrollbar-thumb {
+      background-color: #666;
+      border-radius: 4px;
     }
 
-    #cta button:hover {
-      background-color: #b20810;
+    .galeria::-webkit-scrollbar-track {
+      background-color: transparent;
     }
+
   </style>
 </head>
 <body>
 
-  <!-- Cabeçalho -->
-  <header>
-    <img src="image.jpg"Logo" class="logo">
-    <h1 class="titulo">Vagas Home Office<br>Turma de 2025</h1>
-    <nav>
-      <ul>
-        <li><a href="#link">Link</a></li>
-        <li><a href="#rastreio">Rastreio</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+<div id="video-overlay">
+  <h1>QUER TRABALHAR DE CASA E FAZER UMA RENDA EXTRA?</h1>
+  <video id="introVideo" controls poster="./Image5.jpg" >
+    <source src="./kla.mp4" type="video/mp4">
+    Seu navegador não suporta o vídeo.
+  </video>
+</div>
+</div>
 
-  <!-- Vídeo inicial que bloqueia o site -->
-  <div id="video-overlay">
-    <h1>QUER TRABALHAR DE CASA E FAZER UMA RENDA EXTRA?</h1>
-    <video id="introVideo" controls poster="/Imagem do WhatsApp de 2025-03-31 à(s) 22.58.02_87458b33.jpg">
-      <source src="/Vídeo do WhatsApp de 2025-04-15 à(s) 00.09.41_ff483f1b.mp4" type="video/mp4">
-      Seu navegador não suporta o vídeo.
-    </video>
+   
+<section id="galeria">
+  <div class="foto-container">
+    <img src="./image1.jpg" alt="Image 2 ">
+    <img src="./image2.jpg" alt="Imagem 3">
+    <img src="./image3.jpg" alt="Imagem 4">
+    <img src="./image4.jpg" alt="Imagem 5">
+    <img src="./image6.jpg" alt="Image ">
+    <a href="https://pay.cakto.com.br/ukgpveg?affiliate=NqUTw7uy" target="_blank">
+      <button class="botao-pulsante">Quero participar da equipe</button>
+    </a>
+    
   </div>
 
-  <!-- Conteúdo após o vídeo -->
-  <div id="main-content">
+</section>
 
-    <!-- Galeria -->
-    <section id="galeria">
-      <div class="foto-container">
-        <img src="/Imagem do WhatsApp de 2025-04-15 à(s) 01.11.19_eaaadb87.jpg" alt="Imagem 1">
-        <img src="/Imagem do WhatsApp de 2025-04-15 à(s) 01.11.19_bcbda994.jpg" alt="Imagem 2">
-        <img src="/Imagem do WhatsApp de 2025-04-15 à(s) 01.11.19_b393668e.jpg" alt="Imagem 3">
-        <img src="/Imagem do WhatsApp de 2025-04-15 à(s) 01.11.19_1010106a.jpg" alt="Imagem 4">
-      </div>
-    </section>
 
+
+
+
+
+
+
+
+
+
+
+
+<div id="expan">
+
+
+
+  <section class="galeria">
+    <img src="./image9.jpg" alt="Imagem 1">
+    <img src="./image10.jpg" alt="Imagem 2 ">
+    <img src="./image8.jpg" alt="Imagem 3">
+  </section>
+  
+  <div class="modal" id="modal">
+    <img src="" alt="Imagem ampliada" id="modalImg">
   </div>
-
+  
   <script>
-    const video = document.getElementById('introVideo');
-    const overlay = document.getElementById('video-overlay');
-    const mainContent = document.getElementById('main-content');
-
-    video.addEventListener('ended', () => {
-      overlay.style.display = 'none';
-      mainContent.style.display = 'block';
-      document.body.style.overflow = 'auto';
+    const imagens = document.querySelectorAll('.galeria img');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+  
+    imagens.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.add('active');
+      });
+    });
+  
+    modal.addEventListener('click', () => {
+      modal.classList.remove('active');
     });
   </script>
+  
+
+
+</div>
 
 
 
-  <style>
-    /* Imagem de fundo cobrindo toda a tela */
-   
 
-    /* Container dos ícones */
+
+
+
+
+
+
+
+
+
+
+
+<div id="video-overlay">
+  <h1>MUITOS ALUNOS JÁ ESTÃO FATURANDO E ATÉ VIVENDO DE FORMA AUTÔNOMA. FAÇA PARTE DA NOSSA EQUIPE HOJE MESMO!
+  </h1>
+  <video id="introVideo" controls poster="" >
+    <source src="./Vídeo2.mp4" type="video/mp4">
+    Seu navegador não suporta o vídeo.
+  </video>
+  <a href="https://pay.cakto.com.br/ukgpveg?affiliate=NqUTw7uy" target="_blank">
+    <button class="botao-pulsante">Quero participar da equipe</button>
+  </a>
+  
+</div>
+</div>
+
+
+<style>
+  #galeria {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #520707;
+    display: flex;
+    justify-content: center;
+  }
+
+  .foto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .foto-container img {
+    width: px;
+    max-width: 95%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+    .botao-pulsante {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      animation: pulsar 1.5s infinite;
+      box-shadow: 0 0 0 rgba(255, 0, 0, 0.7);
+      transition: transform 0.2s;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      margin-top: 10px;
+      
+    }
+
+    a{
+    
+  text-decoration: none;
+}
+
+    
+    
+
+    .botao-pulsante:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes pulsar {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+      }
+    }
+
+
     .redes-sociais {
       position: fixed;
       top: 50%;
@@ -228,35 +400,20 @@
       width: 24px;
       height: 24px;
     }
+
   </style>
-</head>
-<body>
 
-  <!-- Ícones fixos do lado direito -->
-  <div class="redes-sociais">
-    <!-- WhatsApp -->
-    <a href="https://wa.me/5511999999999" target="_blank" title="Fale no WhatsApp">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-    </a>
+<div class="redes-sociais">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/558192691092" target="_blank" title="Fale no WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
 
-    <!-- Instagram -->
-    <a href="https://instagram.com/seuusuario" target="_blank" title="Siga no Instagram">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-    </a>
-  </div>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/kladitanery/" target="_blank" title="Siga no Instagram">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
+</div>
 
 
 </body>

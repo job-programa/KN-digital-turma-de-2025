@@ -103,6 +103,101 @@
     #foto{
       margin-top: 10px;
     }
+
+
+
+
+
+
+
+
+    #exoan {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;  }
+
+    section.galeria {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      gap: 20px;
+      padding: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+
+    .galeria img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      scroll-snap-align: center;
+      flex-shrink: 0;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .galeria .img-meio {
+      margin-top: 30px; /* desloca a imagem do meio pra baixo */
+    }
+
+    /* Estilo do modal fullscreen */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+    .modal.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 80%;
+      object-fit: contain;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(255,255,255,0.2), transparent 60%);
+    }
+
+    .modal:after {
+      content: "Clique em qualquer lugar para fechar";
+      position: absolute;
+      bottom: 30px;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    /* Scrollbar opcional pra mobile (visual mais limpo) */
+    .galeria::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .galeria::-webkit-scrollbar-thumb {
+      background-color: #666;
+      border-radius: 4px;
+    }
+
+    .galeria::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
   </style>
 </head>
 <body>
@@ -130,6 +225,66 @@
 
 
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="expan">
+
+
+
+  <section class="galeria">
+    <img src="./image3.jpg" alt="Imagem 1">
+    <img src="./image2.jpg" alt="Imagem 2 ">
+    <img src="./image1.jpg" alt="Imagem 3">
+  </section>
+  
+  <div class="modal" id="modal">
+    <img src="" alt="Imagem ampliada" id="modalImg">
+  </div>
+  
+  <script>
+    const imagens = document.querySelectorAll('.galeria img');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+  
+    imagens.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.add('active');
+      });
+    });
+  
+    modal.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+  </script>
+  
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div id="video-overlay">
