@@ -37,7 +37,7 @@
   .titulo {
     flex: 2;
     text-align: center;
-    font-size: 24px;
+    font-size: 34px;
     
     
   
@@ -156,7 +156,7 @@
 #red2{
 background-color: rgb(145, 9, 9);
 color: white;
-font-size: 20px;
+font-size: 19px;
 padding-top: 10px;
 padding-bottom: 20px;
 margin: 0 !important;
@@ -172,12 +172,13 @@ border: none !important;
 }
 
 #red h2{
-  color: white;
+  color: rgb(254, 254, 254);
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  font-size: 23px;
+  font-size: 20px;
 
 
 }
+
