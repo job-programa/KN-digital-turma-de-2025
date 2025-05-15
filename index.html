@@ -60,15 +60,36 @@
 
   <style>
       
-
-  
-    #video-overlay {
+      #video-overlay2 {
       
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: black;
+      background: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 1;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #video-overlay2 h1 {
+      color: white;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  
+    #video-overlay1 {
+      
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #520707;
+      
       display: flex;
       justify-content: center;
       align-items: center;
@@ -78,7 +99,7 @@
       padding: 20px;
     }
 
-    #video-overlay h1 {
+    #video-overlay1 h1 {
       color: white;
       font-size: 22px;
       margin-bottom: 20px;
@@ -198,7 +219,7 @@
 </head>
 <body>
 
-<div id="video-overlay">
+<div id="video-overlay1">
   <h1>QUER TRABALHAR DE CASA E FAZER UMA RENDA EXTRA?</h1>
   <video id="introVideo" controls poster="./Image5.jpg" >
     <source src="./kla.mp4" type="video/mp4">
@@ -247,7 +268,7 @@
   
 
   <section class="galeria">
-
+    <img src="./image 12.jpeg" alt="Imagem 1">
     <img src="./image9.jpg" alt="Imagem 1">
     <img src="./image10.jpg" alt="Imagem 2 ">
     <img src="./image8.jpg" alt="Imagem 3">
@@ -273,26 +294,84 @@
       modal.classList.remove('active');
     });
   </script>
-  
 
+
+
+</div>
 
 </div>
 
 
 
 
+<div  id="bacu">    
 
 
 
+  <section class="section4">
+    <img src="./Imagem 11.jpg" alt="Logo" class="logo-mini">
+    <div class="bloco-transparente">
+      <h2>Comece agora no Módulo Renda Imediata e tenha a chance de ganhar mais de R$ 3.000 em apenas uma semana!</h2>
+      <p>Ganhe dinheiro rápido e sem burocracia! Com nosso módulo "Renda Imediata", você trabalha em parceria com bancos e recebe o pagamento via Pix no mesmo dia. É possível ganhar mais de R$ 3.000 com apenas 1 cliente! Comece a ganhar dinheiro já na 1ª semana e tenha seu dinheiro investido de volta rapidamente. </p>
+    </div>
+  </section>
+  
+  <div id="video-overlay2">
+    <!-- Texto sobreposto com logo -->
+    <div class="texto-sobreposto">
+        <span>
+        Qual sua desculpa? Não existe dificuldade para quem tem força de vontade.
+        A Thay tem 4 filhos pequenos e sempre teve dedicação e persistência.
+        No Home Office nós te entregamos tudo que precisa para fazer dinheiro e melhorar a vida da sua família. 🔥❤
+      </span>
+    </div>
+    
+    <!-- Vídeo de fundo -->
+    <video id="introVideo" autoplay loop controls>
+      <source src="./VIDEO 10.mp4" type="video/mp4">
+      Seu navegador não suporta o vídeo.
+    </video>
+    
+
+</div>
+
+
+<div>
+
+
+  <section class="galeria">
+    <img src="./sdv1.jpg" alt="Imagem 2 ">
+    <img src="./sdv2.jpg" alt="Imagem 2 ">
+    <img src="./sdv3.jpg" alt="Imagem 2 ">
+    <img src="./sdv4.jpg" alt="Imagem 3">
+  </section>
+  
+  <div class="modal" id="modal">
+    <img src="" alt="Imagem ampliada" id="modalImg">
+  </div>
+  
+  <script>
+    const imagens = document.querySelectorAll('.galeria img');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+  
+    imagens.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.add('active');
+      });
+    });
+  
+    modal.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+  </script>
 
 
 
+</div>
 
-
-
-
-
-<div id="video-overlay">
+<div id="video-overlay1">
   <h1>MUITOS ALUNOS JÁ ESTÃO FATURANDO E ATÉ VIVENDO DE FORMA AUTÔNOMA. FAÇA PARTE DA NOSSA EQUIPE HOJE MESMO!
   </h1>
   <video id="introVideo" controls poster="" >
@@ -385,7 +464,8 @@
       flex-direction: column;
       gap: 15px;
       padding: 10px;
-      z-index: 1000;
+      z-index: 20000;
+
     }
 
     .redes-sociais a {
@@ -516,15 +596,57 @@
 <DIV id="RODA">
 
 
+   <style>
+  .section67 {
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 20px;
 
-  <div class="section">
-    <h2>SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</h2>
-    <p>
-      Mude de vida com a <strong>KN DIGITAL</strong>! Confiamos tanto na qualidade do nosso produto que garantimos resultados.
-      Se em até 7 dias após a compra você não se identificar com o conteúdo,
-      devolvemos o seu dinheiro. Isso mesmo! Tenha resultados ou seu dinheiro de volta!
-    </p>
-  </div>
+    /* Iluminescência branca suave */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+  }
+
+  .section67 > p {
+    color: #000;
+  }
+
+  .section67 > h2 {
+    color: #000;
+  }
+</style>
+
+<div class="section67">
+  <h2>Por que cobramos uma taxa?</h2>
+  <p>
+    Essa taxa é cobrada apenas para garantir o seu acesso à ferramenta de trabalho, que inclui: 
+    <strong>treinamento, suporte, material, credencial, recebimento de serviços e parcerias com agências.</strong><br><br>
+
+    <strong>Mas fique tranquilo:</strong> essa taxa é paga apenas <strong>uma única vez</strong> e o acesso é <strong>vitalício</strong>!<br><br>
+
+    Com o que vou te ensinar, você poderá se tornar um <strong>profissional autônomo</strong>, trabalhando de casa, 
+    sem precisar enfrentar trânsito, ônibus lotado ou se afastar da sua família. 
+    <strong>Você vai conquistar sua liberdade financeira!</strong><br><br>
+
+    Esse é o seu <strong>primeiro passo</strong>. Pense como um investimento no seu próprio negócio.<br>
+    Me diga: <strong>quem consegue abrir um negócio hoje com menos de R$40?</strong><br><br>
+
+    Se você fosse procurar um emprego hoje, teria que gastar com passagem, alimentação 
+    e ainda enfrentar entrevistas, filas e deslocamentos cansativos.<br>
+    Aqui, estou te oferecendo uma <strong>oportunidade real</strong> de aprender algo que gera 
+    <strong>renda imediata</strong>, sem estresse e com total praticidade.<br><br>
+
+    <strong>E tem mais:</strong> você ainda terá <strong>7 dias para conhecer tudo por dentro!</strong><br>
+    Durante esse período, poderá <strong>explorar as áreas, entender como funciona a KN Digital</strong> 
+    e até <strong>fazer um extra com o nosso módulo de Renda Imediata.</strong><br><br>
+
+    <strong>Não gostou? Não se identificou com as áreas da KN Digital?</strong><br>
+    Não importa o motivo — você pode <strong>pedir seu dinheiro de volta, sem demora e sem burocracia.</strong><br><br>
+
+    <strong>Essa é a sua chance de mudar de vida.</strong><br>
+    <strong>O primeiro passo começa agora!</strong>
+  </p>
+</div>
+
 
   <!-- Seção Imagem -->
   <div class="section">
@@ -563,15 +685,36 @@
     });
   </script>
 
-
-
-
-
-
-
-
-
 </DIV>
+
+
+
+
+
+<div class="refund-section" style="padding: 40px; background-color: #f9f9f9; border-radius: 30px; text-align: center; max-width: 400px; margin: 0 auto; height: 750px;">
+  
+  <!-- Imagem no topo centralizada -->
+  <img src="./cakto.png" alt="Garantia de Reembolso" style="width: 200px; height: auto; border-radius: 10px; margin-bottom: 20px;">
+
+  <h2 style="color: #2c3e50;">Garantia de Reembolso Total</h2>
+  
+  <p style="font-size: 16px; color: #333; line-height: 1.6;">
+    <strong>Teste sem riscos!</strong><br>
+    Ao se inscrever, você tem <strong>7 dias completos</strong> para explorar todo o conteúdo da KN Digital, 
+    conhecer as áreas e até gerar sua primeira renda com nosso módulo exclusivo.
+  </p>
+  
+  <p style="font-size: 16px; color: #333; line-height: 1.6;">
+    <strong>Não se identificou?</strong> Sem problemas. Basta solicitar o reembolso dentro do prazo e 
+    <strong>devolvemos 100% do valor</strong> — sem burocracia, sem perguntas e sem complicações.
+  </p>
+  
+ <a href="https://app.cakto.com.br/refund"> <p style="font-size: 18px; color: #27ae60; font-weight: bold; margin-top: 20px;">
+    É simples, rápido e garantido. Sua satisfação ou seu dinheiro de volta!
+  </p></a>
+</div>
+
+
 
 
 </body>
