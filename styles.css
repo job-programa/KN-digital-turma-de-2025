@@ -20,7 +20,15 @@
   
   }
 
-   
+   body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+
+
+
+
 
   .header h1 {
     font-size: 20px;

@@ -1,141 +1,43 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Document</title>
-  <style>
-    #video-overlay {
-      position: relative;
-      max-width: 800px;
-      margin: 50px auto;
-      border-radius: 12px;
-      overflow: hidden;
-      font-family: 'Segoe UI', sans-serif;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
 
-    #introVideo {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+<div id="expan">
 
-    .texto-sobreposto {
-      position: absolute;
-      top: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      background: rgba(0, 0, 0, 0.75);
-      color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      font-size: 20px;
-      line-height: 1.5;
-      text-align: left;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      box-shadow: 0 0 8px rgba(255,255,255,0.2);
-      transition: all 0.3s ease;
-    }
-
-    .texto-sobreposto:hover {
-      box-shadow: 0 0 15px rgba(255,255,255,0.4);
-      background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(30,30,30,0.85));
-    }
-
-    .logo-mini {
-      
-      object-fit: cover;
-      background-color: white;
-      margin: 0 auto 20px auto;
-
-      display: block;
-    }
-
-    #video-overlay h1 {
-      margin: 30px 0;
-      font-size: 22px;
-      color: #c62828;
-      text-align: center;
-      line-height: 1.4;
-    }
-
-    .section4 {
-      max-width: 800px;
-      margin: 40px auto;
-      text-align: center;
-      font-family: 'Segoe UI', sans-serif;
-      
-    }
-
-    .bloco-transparente {
-      background-color: rgba(255, 2, 2, 0.05);
-      padding: 20px;
-      border-radius: 12px;
-    }
-
-    .bloco-transparente h2 {
-      font-size: 22px;
-      color: #fbfbfb;
-    }
-
-    .bloco-transparente p {
-      font-size: 16px;
-      color: #ffffff;
-      margin: 10px 0;
-    }
-
-    @media (max-width: 600px) {
-      .texto-sobreposto {
-        top: 81%;
-        font-size: 16px;
-        padding: 15px;
-        gap: 10px;
-        text-align: center;
-      }
-
-      .logo-mini {
-       height: 50PX;
-      }
-
-      #video-overlay h1 {
-        font-size: 18px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-    <section class="section4">
-        <img src="./Imagem 11.jpg" alt="Logo" class="logo-mini">
-        <div class="bloco-transparente">
-          <h2>RESULTADOS REAIS DE QUEM JÁ ESTÁ COM A KN DIGITAL</h2>
-          <p>Transformações incríveis em menos de 30 dias.</p>
-          <p>Deslize para o lado e clique nas fotos para ver de perto.</p>
-        </div>
-      </section>
-    
-    
-
-  <div id="video-overlay">
-    <!-- Texto sobreposto com logo -->
-    <div class="texto-sobreposto">
-        <span>
-        Qual sua desculpa? Não existe dificuldade para quem tem força de vontade.
-        A Thay tem 4 filhos pequenos e sempre teve dedicação e persistência.
-        No Home Office nós te entregamos tudo que precisa para fazer dinheiro e melhorar a vida da sua família. 🔥❤
-      </span>
+  <section class="section2">
+    <div class="bloco-transparente">
+      <h2>RESULTADOS REAIS DE QUEM JÁ ESTÁ COM A KN DIGITAL</h2>
+      <p>Transformações incríveis em menos de 30 dias.</p>
+      <p>Deslize para o lado e clique nas fotos para ver de perto.</p>
     </div>
-
-    <!-- Vídeo de fundo -->
-    <video id="introVideo" autoplay muted loop>
-      <source src="./VIDEO 10.mp4" type="video/mp4">
-      Seu navegador não suporta o vídeo.
-    </video>
+  </section>
+  
+   
+  <section class="galeria">
+    <img src="./image 12.jpeg" alt="Imagem 1">
+    <img src="./image9.jpg" alt="Imagem 1">
+    <img src="./image10.jpg" alt="Imagem 2 ">
+    <img src="./image8.jpg" alt="Imagem 3">
+  </section>
+  
+  <div class="modal" id="modal">
+    <img src="" alt="Imagem ampliada" id="modalImg">
   </div>
+  
+  <script>
+    const imagens = document.querySelectorAll('.galeria img');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+  
+    imagens.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.add('active');
+      });
+    });
+  
+    modal.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+  </script>
 
+
+
+</div>

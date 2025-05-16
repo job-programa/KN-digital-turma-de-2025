@@ -274,11 +274,6 @@
 
 
 
-
-
-
-
-
 <div id="expan">
 
   <section class="section2">
@@ -289,38 +284,41 @@
     </div>
   </section>
   
-
-  <section class="galeria">
-    <img src="./image 12.jpeg" alt="Imagem 1">
-    <img src="./image9.jpg" alt="Imagem 1">
-    <img src="./image10.jpg" alt="Imagem 2 ">
-    <img src="./image8.jpg" alt="Imagem 3">
+  <section class="galeria" aria-label="Galeria de resultados">
+    <img src="./image12.jpeg" alt="Antes e depois de aluna KN Digital">
+    <img src="./image9.jpg" alt="Print de ganho em 7 dias">
+    <img src="./image10.jpg" alt="Depoimento de estudante aprovado">
+    <img src="./image8.jpg" alt="Print de venda realizada">
   </section>
   
   <div class="modal" id="modal">
     <img src="" alt="Imagem ampliada" id="modalImg">
   </div>
-  
+
   <script>
     const imagens = document.querySelectorAll('.galeria img');
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modalImg');
-  
+
     imagens.forEach(img => {
       img.addEventListener('click', () => {
         modalImg.src = img.src;
         modal.classList.add('active');
       });
     });
-  
+
     modal.addEventListener('click', () => {
       modal.classList.remove('active');
     });
   </script>
 
-
-
 </div>
+
+
+
+
+
+
 
 </div>
 
