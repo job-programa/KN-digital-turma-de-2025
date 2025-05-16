@@ -44,7 +44,7 @@
 <script src="./script.js" defer></script>
 </div>
 <script src="script.js"></script>
-
+</div>
 
 
 
@@ -184,6 +184,8 @@
       opacity: 1;
     }
 
+    #bacu{ background-color: #000000;}
+
     .modal img {
       max-width: 90%;
       max-height: 80%;
@@ -219,14 +221,24 @@
 </head>
 <body>
 
-<div id="video-overlay1">
+<div id="video-overlay1" style="text-align: center; padding: 20px;">
   <h1>QUER TRABALHAR DE CASA E FAZER UMA RENDA EXTRA?</h1>
-  <video id="introVideo" controls poster="./Image5.jpg" >
-    <source src="./kla.mp4" type="video/mp4">
-    Seu navegador não suporta o vídeo.
-  </video>
+
+  <div style="position: relative; width: 100%; max-width: 720px; margin: 0 auto;">
+    <video id="introVideo" 
+           controls 
+           poster="./Image5.jpg"
+           playsinline
+           preload="metadata"
+           style="width: 100%; height: auto; border-radius: 8px;">
+      <source src="./kla.mp4" type="video/mp4">
+      <source src="./kla.webm" type="video/webm">
+      <source src="./kla.ogg" type="video/ogg">
+      Seu navegador não suporta o vídeo.
+    </video>
+  </div>
 </div>
-</div>
+
 
    
 <section id="galeria">
@@ -324,14 +336,23 @@
         A Thay tem 4 filhos pequenos e sempre teve dedicação e persistência.
         No Home Office nós te entregamos tudo que precisa para fazer dinheiro e melhorar a vida da sua família. 🔥❤
       </span>
-    </div>
+     </div>
     
-    <!-- Vídeo de fundo -->
-    <video id="introVideo" autoplay loop controls>
-      <source src="./VIDEO 10.mp4" type="video/mp4">
-      Seu navegador não suporta o vídeo.
-    </video>
-    
+      
+   
+<video id="introVideo" 
+       controls 
+       loop 
+       playsinline 
+       preload="metadata"
+       style="width: 100%; height: auto; border-radius: 8px;">
+  <source src="./VIDEO 10.mp4" type="video/mp4">
+  <source src="./VIDEO 10.webm" type="video/webm">
+  <source src="./VIDEO 10.ogg" type="video/ogg">
+  Seu navegador não suporta o vídeo.
+</video>
+
+
 
 </div>
 
@@ -339,7 +360,7 @@
 <div>
 
 
-  <section class="galeria">
+  <section class="galeria" >
     <img src="./sdv1.jpg" alt="Imagem 2 ">
     <img src="./sdv2.jpg" alt="Imagem 2 ">
     <img src="./sdv3.jpg" alt="Imagem 2 ">
@@ -374,10 +395,26 @@
 <div id="video-overlay1">
   <h1>MUITOS ALUNOS JÁ ESTÃO FATURANDO E ATÉ VIVENDO DE FORMA AUTÔNOMA. FAÇA PARTE DA NOSSA EQUIPE HOJE MESMO!
   </h1>
-  <video id="introVideo" controls poster="" >
-    <source src="./Vídeo2.mp4" type="video/mp4">
-    Seu navegador não suporta o vídeo.
-  </video>
+  
+
+<div style="text-align: center; padding: 20px;">
+  <div style="position: relative; width: 100%; max-width: 720px; margin: 0 auto;">
+    <video id="introVideo" 
+           controls 
+           playsinline 
+           preload="metadata" 
+           style="width: 100%; height: auto; border-radius: 8px;">
+      <source src="./Vídeo2.mp4" type="video/mp4">
+      <source src="./Vídeo2.webm" type="video/webm">
+      <source src="./Vídeo2.ogg" type="video/ogg">
+      Seu navegador não suporta o vídeo.
+    </video>
+  </div>
+</div>
+
+
+
+
   <a href="https://pay.cakto.com.br/3b3dvrs?affiliate=NqUTw7uy" target="_blank">
     <button class="botao-pulsante">Quero participar da equipe</button>
   </a>
