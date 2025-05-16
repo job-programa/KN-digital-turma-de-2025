@@ -224,18 +224,31 @@
 <div id="video-overlay1" style="text-align: center; padding: 20px;">
   <h1>QUER TRABALHAR DE CASA E FAZER UMA RENDA EXTRA?</h1>
 
-  <div style="position: relative; width: 100%; max-width: 720px; margin: 0 auto;">
-    <video id="introVideo" 
-           controls 
-           poster="./Image5.jpg"
-           playsinline
-           preload="metadata"
-           style="width: 100%; height: auto; border-radius: 8px;">
-      <source src="./kla.mp4" type="video/mp4">
-      Seu navegador não suporta o vídeo.
-    </video>
+  <div id="video-container" style="position: relative; width: 100%; max-width: 720px; margin: 0 auto;">
+    <div id="video-poster" style="cursor: pointer; position: relative;">
+      <img src="./Image5.jpg" alt="Poster do vídeo" style="width: 100%; border-radius: 8px;">
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/play--v1.png" alt="Play" style="width: 64px; opacity: 0.8;">
+      </div>
+    </div>
   </div>
 </div>
+
+<script>
+  document.getElementById('video-poster').addEventListener('click', function () {
+    const container = document.getElementById('video-container');
+    container.innerHTML = `
+      <iframe width="100%" height="405" 
+        src="https://www.youtube.com/embed/ZBcBX7-07pU?rel=0&modestbranding=1&controls=1&autoplay=1" 
+        title="16 de maio de 2025" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen style="border-radius: 8px;">
+      </iframe>`;
+  });
+</script>
+
+
+
 
 
    
@@ -745,74 +758,6 @@
     É simples, rápido e garantido. Sua satisfação ou seu dinheiro de volta!
   </p></a>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<video controls preload="metadata" style="width: 100%; max-width: 720px; border-radius: 8px; display: block; margin: 20px auto;">
-  <source src="./kla.mp4" type="video/mp4">
-  Seu navegador não suporta o vídeo.
-</video>
-
-
-
-
-
-
-<div style="text-align: center; padding: 20px;">
-  <div style="position: relative; width: 100%; max-width: 720px; margin: 0 auto;">
-    <video id="introVideo" 
-
-           style="width: 100%; height: auto; border-radius: 8px;">
-      <source src="./Vídeo2.mp4" type="video/mp4">
-      Seu navegador não suporta o vídeo.
-    </video>
-  </div>
-</div>
-
-
-
-
-<div style="text-align: center; padding: 20px;">
-  <div style="position: relative; width: 100%; max-width: 720px; margin: 0 auto;">
-    <video id="introVideo" 
-           controls 
-           playsinline  
-             preload="metadata"
-           style="width: 100%; height: auto; border-radius: 8px;">
-      <source src="./Vídeo2.mp4" type="video/mp4">
-      Seu navegador não suporta o vídeo.
-    </video>
-  </div>
-</div>
-
-
-
 
 
 </body>
