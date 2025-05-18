@@ -221,18 +221,34 @@
 </head>
 <body>
 
-<div style="position: relative; width: 100%; max-width: 720px; margin: 0 auto;">
-    <video id="introVideo" 
-           controls 
-           poster="./image 5.jpg"
-           playsinline
-           preload="metadata"
-           style="width: 100%; height: auto; border-radius: 8px;">
-      <source src="./kla.mp4" type="video/mp4">
-      Seu navegador não suporta o vídeo.
-    </video>
+<div id="video-overlay1" style="text-align: center; padding: 20px;">
+  <h1>QUER TRABALHAR DE CASA E FAZER UMA RENDA EXTRA?</h1>
+
+ <div id="video-overlay1" style="text-align: center; padding: 20px;">
+  <h1>QUER TRABALHAR DE CASA E FAZER UMA RENDA EXTRA?</h1>
+
+  <div id="video-container" style="position: relative; width: 100%; max-width: 720px; margin: 0 auto;">
+    <div id="video-poster" style="cursor: pointer; position: relative;">
+      <img src="./Image5.jpg" alt="Poster do vídeo" style="width: 100%; border-radius: 8px;">
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/play--v1.png" alt="Play" style="width: 64px; opacity: 0.8;">
+      </div>
+    </div>
   </div>
-</div>     
+</div>
+
+<script>
+  document.getElementById('video-poster').addEventListener('click', function () {
+    const container = document.getElementById('video-container');
+    container.innerHTML = `
+      <iframe width="100%" height="405" 
+        src="https://www.youtube.com/embed/ZBcBX7-07pU?rel=0&modestbranding=1&controls=1&autoplay=1" 
+        title="16 de maio de 2025" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen style="border-radius: 8px;">
+      </iframe>`;
+  });
+</script>
 
 
    
@@ -258,11 +274,6 @@
 
 
 
-
-
-
-
-
 <div id="expan">
 
   <section class="section2">
@@ -273,38 +284,41 @@
     </div>
   </section>
   
-
-  <section class="galeria">
-    <img src="./image 12.jpeg" alt="Imagem 1">
-    <img src="./image9.jpg" alt="Imagem 1">
-    <img src="./image10.jpg" alt="Imagem 2 ">
-    <img src="./image8.jpg" alt="Imagem 3">
+  <section class="galeria" aria-label="Galeria de resultados">
+    <img src="./image12.jpeg" alt="Antes e depois de aluna KN Digital">
+    <img src="./image9.jpg" alt="Print de ganho em 7 dias">
+    <img src="./image10.jpg" alt="Depoimento de estudante aprovado">
+    <img src="./image8.jpg" alt="Print de venda realizada">
   </section>
   
   <div class="modal" id="modal">
     <img src="" alt="Imagem ampliada" id="modalImg">
   </div>
-  
+
   <script>
     const imagens = document.querySelectorAll('.galeria img');
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modalImg');
-  
+
     imagens.forEach(img => {
       img.addEventListener('click', () => {
         modalImg.src = img.src;
         modal.classList.add('active');
       });
     });
-  
+
     modal.addEventListener('click', () => {
       modal.classList.remove('active');
     });
   </script>
 
-
-
 </div>
+
+
+
+
+
+
 
 </div>
 
@@ -334,16 +348,21 @@
      </div>
     
       
-   
-<video id="introVideo" 
-       controls 
-       loop 
-       playsinline 
-       preload="metadata"
-       style="width: 100%; height: auto; border-radius: 8px;">
-  <source src="./VIDEO 10.mp4" type="video/mp4">
-  Seu navegador não suporta o vídeo.
-</video>
+  
+    <iframe 
+      width="100%" 
+      height="405" 
+      src="https://www.youtube.com/embed/AlyV4bFIuho?controls=1&modestbranding=1&rel=0&showinfo=0" 
+      title="16 de maio de 2025" 
+      frameborder="0" 
+      allow="autoplay; encrypted-media" 
+      allowfullscreen 
+      style="border-radius: 8px;">
+    </iframe>
+  </div>
+</div>
+
+
 
 
 
@@ -390,18 +409,17 @@
   </h1>
   
 
-<div style="text-align: center; padding: 20px;">
-  <div style="position: relative; width: 100%; max-width: 720px; margin: 0 auto;">
-    <video id="introVideo" 
-           controls 
-           playsinline  
-             preload="metadata"
-           style="width: 100%; height: auto; border-radius: 8px;">
-      <source src="./Vídeo2.mp4" type="video/mp4">
-      Seu navegador não suporta o vídeo.
-    </video>
-  </div>
-</div>
+<iframe 
+  width="100%" 
+  height="405" 
+  src="https://www.youtube.com/embed/bwv6zTyQxoU?controls=1&modestbranding=1&rel=0&showinfo=0" 
+  title="Vídeo" 
+  frameborder="0" 
+  allow="autoplay; encrypted-media" 
+  allowfullscreen 
+  style="border-radius: 8px;">
+</iframe>
+
 
 
 
@@ -723,7 +741,7 @@
 ">
   
   <!-- Imagem no topo centralizada -->
-  <img src="./cakto.png" alt="Garantia de Reembolso" style="width: 100px; height: auto; border-radius: 10px; margin-bottom: 20px;">
+  <img src="./cakto.png" alt="Garantia de Reembolso" style="width: 90px; height: auto; border-radius: 10px; margin-bottom: 20px;">
 
   <h2 style="color: #2c3e50;">Garantia de Reembolso Total</h2>
   
